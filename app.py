@@ -116,6 +116,7 @@ def instagram_login():
     return jsonify({"error": "Failed to log in to Instagram"})
 
 if __name__ == '__main__':
+      app.run(debug=False)
     with app.app_context():
         logger.info("Creating database tables...")
         db.create_all()
