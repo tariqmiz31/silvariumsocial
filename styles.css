@@ -64,6 +64,17 @@ body{
   margin: 6px 0 18px;
 }
 
+.note{
+  margin: 0 0 14px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(0,0,0,0.16);
+  color: rgba(255,255,255,0.78);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
 .logo{
   width: min(320px, 72vw);
   height: auto;
