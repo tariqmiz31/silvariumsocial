@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>System Status • Silvarium Social</title>
+  <meta name="description" content="Silvarium Social system status and service availability." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <div class="overlay" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="brand-mini">
+      <a class="brand-link" href="index.html">
+        <span class="brand-name">Silvarium Social</span>
+      </a>
+    </div>
+
+    <button id="langToggle" class="lang-btn" type="button" aria-label="Toggle language">AR</button>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h1 data-i18n="statusTitle">System Status</h1>
+
+      <div class="status-pill" role="status" aria-live="polite">
+        <span class="status-dot"></span>
+        <span data-i18n="statusOperational">Current Status: Operational</span>
+      </div>
+
+      <p class="desc" data-i18n="statusBody">
+        Silvarium Social services are currently operational.
+        The platform is monitored to ensure reliability, security, and performance for authorized users.
+        If you are experiencing issues accessing the system, please contact support.
+      </p>
+
+      <div class="cta-row">
+        <a class="btn primary" href="https://app.silvariumsocial.com" target="_blank" rel="noopener" data-i18n="cta">
+          Access Application
+        </a>
+        <a class="btn ghost" href="contact.html" data-i18n="contactCta">Contact Support</a>
+      </div>
+
+      <div class="links-row">
+        <a href="index.html" data-i18n="backHome">Back to Home</a>
+      </div>
+
+      <footer class="footer">
+        <p class="fine" data-i18n="copyright">
+          © Silvarium Social. All rights reserved.<br />
+          Silvarium is a registered brand name.
+        </p>
+      </footer>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
