@@ -7,7 +7,7 @@
       title: "Silvarium Social",
       subtitle: "Professional Social Media Publishing Platform",
       desc:
-        "Silvarium Social is a professional platform designed to help businesses and teams " +
+        "Silvarium Social is a professional platform designed to help teams " +
         "publish, schedule, and manage content across supported social media platforms.\n\n" +
         "Access to the application is restricted to authorized users.",
 
@@ -40,10 +40,10 @@ complianceNote: "This domain is used for brand identification and compliance pur
     },
 
     ar: {
-      title: "Silvarium Social",
+      title: "سيلفريوم سوشل",
       subtitle: "منصة احترافية لنشر وإدارة المحتوى على منصات التواصل",
       desc:
-        "Silvarium Social منصة احترافية تساعد الشركات والفرق على نشر المحتوى وجدولته وإدارته عبر منصات التواصل المدعومة.\n\n" +
+        "سيلفريوم سوشل منصة احترافية تساعد الفرق على نشر المحتوى وجدولته وإدارته عبر منصات التواصل المدعومة.\n\n" +
         "الدخول إلى التطبيق متاح للمستخدمين المصرّح لهم فقط.",
 
       cta: "الدخول إلى التطبيق",
@@ -59,19 +59,19 @@ complianceNote: "This domain is used for brand identification and compliance pur
       statusTitle: "حالة النظام",
       statusOperational: "الحالة الحالية: تعمل بشكل طبيعي",
       statusBody:
-        "خدمات Silvarium Social تعمل بشكل طبيعي حاليًا. " +
+        "خدمات سيلفريوم سوشل تعمل بشكل طبيعي حاليًا. " +
         "يتم مراقبة النظام لضمان الاعتمادية والأمان والأداء للمستخدمين المصرّح لهم. " +
         "إذا واجهت مشكلة في الوصول، يرجى التواصل مع الدعم.",
 
       contactTitle: "الدعم والتواصل",
       contactBody:
-        "للاستفسارات والدعم الفني المتعلقة بمنصة Silvarium Social، يرجى التواصل مع فريق الدعم.\n" +
+        "للاستفسارات والدعم الفني المتعلقة بمنصة سيلفريوم سوشل، يرجى التواصل مع فريق الدعم.\n" +
         "الدعم متاح للمستخدمين المصرّح لهم فقط.",
       emailLabel: "البريد الإلكتروني",
 complianceNote: "يُستخدم هذا النطاق لأغراض تعريف العلامة التجارية والامتثال.",
 
       copyright:
-        "© Silvarium Social. جميع الحقوق محفوظة.\nSilvarium علامة تجارية مسجلة."
+        "© سيلفريوم سوشل. جميع الحقوق محفوظة.\nسيلفريوم  علامة تجارية مسجلة."
     }
   };
 
