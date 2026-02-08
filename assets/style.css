@@ -1,87 +1,44 @@
-:root{
-  --text:#111827;
-  --muted:#6b7280;
-  --card:#ffffff;
-  --border:#e5e7eb;
-  --link:#0b57d0;
-  --shadow:0 12px 40px rgba(0,0,0,.08);
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: url("/assets/background.png") no-repeat center center fixed;
+  background-size: cover;
+  color: #2f3a2f;
 }
 
-*{box-sizing:border-box}
-
-body{
-  margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-  color:var(--text);
-  line-height:1.75;
-  background:
-    linear-gradient(rgba(255,255,255,.92), rgba(255,255,255,.92)),
-    url("/assets/background.png");
-  background-repeat:no-repeat;
-  background-position:center top;
-  background-size:cover;
+.page-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
-a{color:var(--link);text-decoration:none}
-a:hover{text-decoration:underline}
-
-.container{
-  max-width:960px;
-  margin:72px auto;
-  padding:0 20px;
+.legal-page {
+  background: rgba(255,255,255,0.88);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
-.card{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:16px;
-  box-shadow:var(--shadow);
-  padding:48px;
+.legal-page h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
 }
 
-.topbar{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:12px;
-  margin-bottom:24px;
+.legal-page .updated {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-bottom: 24px;
 }
 
-.brand{
-  font-weight:700;
-  font-size:18px;
+.legal-page h2 {
+  margin-top: 28px;
+  font-size: 20px;
 }
 
-.lang button{
-  border:1px solid var(--border);
-  background:#fff;
-  padding:8px 14px;
-  border-radius:10px;
-  cursor:pointer;
-  font-weight:600;
+.legal-page p {
+  line-height: 1.8;
+  margin: 12px 0;
 }
 
-.lang button[aria-pressed="true"]{
-  outline:2px solid #c7d2fe;
-}
-
-h1{font-size:36px;margin:10px 0}
-h2{margin-top:32px;font-size:18px;border-top:1px solid var(--border);padding-top:20px}
-p{margin:14px 0;color:#374151}
-ul{padding-left:20px}
-
-.footer{
-  margin-top:36px;
-  padding-top:18px;
-  border-top:1px solid var(--border);
-  font-size:13px;
-  color:var(--muted);
-  display:flex;
-  justify-content:space-between;
-  flex-wrap:wrap;
-  gap:10px;
-}
-
-.lang-block[hidden]{display:none}
 [dir="rtl"]{direction:rtl}
 [dir="rtl"] ul{padding-right:20px;padding-left:0}
