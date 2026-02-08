@@ -2,450 +2,87 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <title>Silvarium Social — Command Center</title>
-  <meta name="description" content="Silvarium Social Command Center portal. Access the app and view Terms, Privacy, and Data Deletion pages." />
+  <title>Silvarium Social</title>
+  <meta name="description" content="Silvarium Social is a professional platform designed to help businesses and teams publish, schedule, and manage content across supported social media platforms. Access is restricted to authorized users." />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Silvarium Social — Command Center" />
-  <meta property="og:description" content="A professional access portal for Silvarium Social systems." />
+  <!-- Optional: social preview -->
+  <meta property="og:title" content="Silvarium Social" />
+  <meta property="og:description" content="Professional Social Media Publishing Platform for authorized teams." />
   <meta property="og:type" content="website" />
 
-  <style>
-    :root{
-      --card-bg: rgba(10, 12, 16, 0.62);
-      --card-border: rgba(255,255,255,0.12);
-      --text: rgba(255,255,255,0.92);
-      --muted: rgba(255,255,255,0.75);
-      --muted2: rgba(255,255,255,0.62);
-      --btn-bg: rgba(255,255,255,0.12);
-      --btn-bg-hover: rgba(255,255,255,0.18);
-      --primary: rgba(255,255,255,0.92);
-      --shadow: 0 18px 60px rgba(0,0,0,0.45);
-    }
-
-    *{ box-sizing:border-box; }
-    html, body{ height:100%; }
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      color: var(--text);
-      background:#000;
-      overflow-x:hidden;
-    }
-
-    /* Background image */
-    .bg{
-      position:fixed;
-      inset:0;
-      background:
-        radial-gradient(1200px 600px at 15% 20%, rgba(255,255,255,0.08), transparent 55%),
-        radial-gradient(900px 500px at 85% 25%, rgba(255,255,255,0.06), transparent 55%),
-        linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.75)),
-        url("assets/bg.jpg") center / cover no-repeat;
-      filter: saturate(1.05) contrast(1.05);
-      transform: scale(1.03);
-    }
-    .bg::after{
-      content:"";
-      position:absolute;
-      inset:0;
-      background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.72));
-      pointer-events:none;
-    }
-
-    .wrap{
-      min-height:100%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding: 28px 18px;
-      position:relative;
-    }
-
-    .card{
-      width:min(980px, 100%);
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 18px;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      overflow:hidden;
-    }
-
-    .topbar{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 16px;
-      padding: 16px 18px;
-      border-bottom: 1px solid rgba(255,255,255,0.10);
-    }
-
-    .brand{
-      display:flex;
-      align-items:center;
-      gap: 12px;
-      min-width: 0;
-    }
-    .logo{
-      width: 38px;
-      height: 38px;
-      border-radius: 10px;
-      border: 1px solid rgba(255,255,255,0.14);
-      background: rgba(255,255,255,0.08);
-      display:grid;
-      place-items:center;
-      flex: 0 0 auto;
-    }
-    .logo span{
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      opacity: 0.95;
-    }
-
-    .brandtext{ min-width:0; }
-    .brandtext h1{
-      font-size: 15px;
-      margin:0;
-      letter-spacing: 0.2px;
-      white-space:nowrap;
-      overflow:hidden;
-      text-overflow:ellipsis;
-    }
-    .brandtext p{
-      margin: 3px 0 0 0;
-      font-size: 12px;
-      color: var(--muted2);
-      white-space:nowrap;
-      overflow:hidden;
-      text-overflow:ellipsis;
-    }
-
-    .lang{
-      display:flex;
-      gap: 8px;
-      align-items:center;
-      flex: 0 0 auto;
-    }
-    .chip{
-      border: 1px solid rgba(255,255,255,0.14);
-      background: rgba(255,255,255,0.08);
-      color: var(--primary);
-      padding: 8px 10px;
-      border-radius: 999px;
-      cursor:pointer;
-      font-size: 12px;
-      user-select:none;
-      transition: 150ms ease;
-    }
-    .chip:hover{ background: rgba(255,255,255,0.12); }
-    .chip.active{
-      background: rgba(255,255,255,0.18);
-      border-color: rgba(255,255,255,0.22);
-    }
-
-    .content{
-      display:grid;
-      grid-template-columns: 1.25fr 0.75fr;
-      gap: 0;
-    }
-
-    .main{
-      padding: 28px 26px 22px 26px;
-    }
-    .aside{
-      padding: 28px 22px 22px 22px;
-      border-left: 1px solid rgba(255,255,255,0.10);
-      background: rgba(255,255,255,0.03);
-    }
-
-    .title{
-      font-size: 28px;
-      margin: 0 0 10px 0;
-      letter-spacing: 0.2px;
-      line-height: 1.15;
-    }
-    .subtitle{
-      margin: 0 0 18px 0;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.7;
-    }
-
-    .actions{
-      display:flex;
-      gap: 12px;
-      flex-wrap:wrap;
-      margin-top: 14px;
-    }
-
-    .btn{
-      appearance:none;
-      border: 1px solid rgba(255,255,255,0.16);
-      background: var(--btn-bg);
-      color: var(--primary);
-      padding: 12px 14px;
-      border-radius: 12px;
-      cursor:pointer;
-      text-decoration:none;
-      display:inline-flex;
-      align-items:center;
-      gap: 10px;
-      font-weight: 600;
-      font-size: 14px;
-      transition: 150ms ease;
-    }
-    .btn:hover{ background: var(--btn-bg-hover); transform: translateY(-1px); }
-    .btn.primary{
-      background: rgba(255,255,255,0.18);
-      border-color: rgba(255,255,255,0.24);
-    }
-    .btn svg{ opacity:0.9; }
-
-    .note{
-      margin-top: 16px;
-      padding: 12px 14px;
-      border-radius: 12px;
-      border: 1px dashed rgba(255,255,255,0.18);
-      color: var(--muted);
-      font-size: 12.5px;
-      line-height: 1.6;
-    }
-
-    .list{
-      display:flex;
-      flex-direction:column;
-      gap: 10px;
-      margin-top: 10px;
-    }
-    .link{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 12px;
-      padding: 12px 12px;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.06);
-      color: var(--primary);
-      text-decoration:none;
-      font-size: 13px;
-      transition: 150ms ease;
-    }
-    .link:hover{ background: rgba(255,255,255,0.10); }
-    .link small{ color: var(--muted2); font-size: 11px; }
-
-    .footer{
-      padding: 14px 18px;
-      border-top: 1px solid rgba(255,255,255,0.10);
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap: 12px;
-      flex-wrap:wrap;
-      color: var(--muted2);
-      font-size: 12px;
-    }
-    .footer a{
-      color: var(--muted);
-      text-decoration:none;
-      border-bottom: 1px dotted rgba(255,255,255,0.35);
-    }
-    .footer a:hover{ color: var(--primary); }
-
-    @media (max-width: 860px){
-      .content{ grid-template-columns: 1fr; }
-      .aside{ border-left: none; border-top: 1px solid rgba(255,255,255,0.10); }
-      .title{ font-size: 24px; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
   <div class="bg" aria-hidden="true"></div>
+  <div class="overlay" aria-hidden="true"></div>
 
-  <div class="wrap">
-    <div class="card" role="main" aria-label="Silvarium Social portal">
-      <div class="topbar">
-        <div class="brand">
-          <div class="logo" aria-hidden="true"><span>S</span></div>
-          <div class="brandtext">
-            <h1>Silvarium Social</h1>
-            <p id="tagline">Command Center Access Portal</p>
-          </div>
-        </div>
-
-        <div class="lang" aria-label="Language">
-          <div class="chip active" id="btn-en" onclick="setLang('en')">EN</div>
-          <div class="chip" id="btn-ar" onclick="setLang('ar')">AR</div>
-        </div>
-      </div>
-
-      <div class="content">
-        <section class="main">
-          <h2 class="title" id="heroTitle">Welcome to Silvarium Social</h2>
-          <p class="subtitle" id="heroText">
-            This portal is designed for monitors and team members accessing the Silvarium Social application.
-            Use the button below to sign in to the app securely.
-          </p>
-
-          <div class="actions">
-            <a class="btn primary" href="https://app.silvariumsocial.com" target="_blank" rel="noopener">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M14 3h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M21 3l-9 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M10 7H7a4 4 0 0 0-4 4v6a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-              <span id="loginBtn">Go to App Login</span>
-            </a>
-
-            <a class="btn" href="https://www.silvariumsocial.com/privacy/" target="_blank" rel="noopener">
-              <span id="privacyBtn">Privacy</span>
-            </a>
-
-            <a class="btn" href="https://www.silvariumsocial.com/terms/" target="_blank" rel="noopener">
-              <span id="termsBtn">Terms</span>
-            </a>
-          </div>
-
-          <div class="note" id="noteBox">
-            If you are a platform reviewer or compliance auditor, the public pages below contain the required policies and data deletion instructions.
-          </div>
-        </section>
-
-        <aside class="aside" aria-label="Resources">
-          <div style="font-weight:700; margin-bottom:8px;" id="resourcesTitle">Public Resources</div>
-          <div class="list">
-            <a class="link" href="https://www.silvariumsocial.com/terms/" target="_blank" rel="noopener">
-              <div>
-                <div id="termsLink">Terms of Service</div>
-                <small>/terms/</small>
-              </div>
-              <div aria-hidden="true">→</div>
-            </a>
-
-            <a class="link" href="https://www.silvariumsocial.com/privacy/" target="_blank" rel="noopener">
-              <div>
-                <div id="privacyLink">Privacy Policy</div>
-                <small>/privacy/</small>
-              </div>
-              <div aria-hidden="true">→</div>
-            </a>
-
-            <a class="link" href="https://www.silvariumsocial.com/data-deletion/" target="_blank" rel="noopener">
-              <div>
-                <div id="deletionLink">Data Deletion</div>
-                <small>/data-deletion/</small>
-              </div>
-              <div aria-hidden="true">→</div>
-            </a>
-          </div>
-
-          <div class="note" style="margin-top:14px;" id="ownershipBox">
-            Silvarium Social is a product owned and operated by <strong>Silvarium</strong>.
-            All trademarks, logos, and brand assets are the property of Silvarium.
-          </div>
-        </aside>
-      </div>
-
-      <div class="footer">
-        <div id="footerLeft">© <span id="year"></span> Silvarium. All rights reserved.</div>
-        <div style="display:flex; gap:12px; flex-wrap:wrap;">
-          <a href="https://www.silvariumsocial.com/privacy/" target="_blank" rel="noopener" id="footerPrivacy">Privacy</a>
-          <a href="https://www.silvariumsocial.com/terms/" target="_blank" rel="noopener" id="footerTerms">Terms</a>
-          <a href="https://www.silvariumsocial.com/data-deletion/" target="_blank" rel="noopener" id="footerDeletion">Data Deletion</a>
-        </div>
-      </div>
+  <header class="topbar">
+    <div class="brand-mini">
+      <!-- ضع الشعار هنا إذا رفعته: assets/SILVA1.png -->
+      <!-- <img src="assets/SILVA1.png" alt="Silvarium" class="logo-mini" /> -->
+      <span class="brand-name">Silvarium Social</span>
     </div>
-  </div>
 
-  <script>
-    const STR = {
-      en: {
-        tagline: "Command Center Access Portal",
-        heroTitle: "Welcome to Silvarium Social",
-        heroText:
-          "This portal is designed for monitors and team members accessing the Silvarium Social application. Use the button below to sign in to the app securely.",
-        loginBtn: "Go to App Login",
-        privacyBtn: "Privacy",
-        termsBtn: "Terms",
-        noteBox:
-          "If you are a platform reviewer or compliance auditor, the public pages below contain the required policies and data deletion instructions.",
-        resourcesTitle: "Public Resources",
-        termsLink: "Terms of Service",
-        privacyLink: "Privacy Policy",
-        deletionLink: "Data Deletion",
-        ownershipBox:
-          "Silvarium Social is a product owned and operated by Silvarium. All trademarks, logos, and brand assets are the property of Silvarium.",
-        footerLeft: "© YEAR Silvarium. All rights reserved.",
-        footerPrivacy: "Privacy",
-        footerTerms: "Terms",
-        footerDeletion: "Data Deletion",
-        dir: "ltr",
-        lang: "en"
-      },
-      ar: {
-        tagline: "بوابة الدخول لنظام سيلفاريوم سوشال",
-        heroTitle: "مرحبًا بك في Silvarium Social",
-        heroText:
-          "هذه الصفحة مخصصة لمراقبي المنصات وأعضاء الفريق للوصول إلى تطبيق Silvarium Social بشكل احترافي وآمن. استخدم زر الدخول للانتقال إلى صفحة تسجيل الدخول.",
-        loginBtn: "الدخول إلى التطبيق",
-        privacyBtn: "سياسة الخصوصية",
-        termsBtn: "شروط الاستخدام",
-        noteBox:
-          "إذا كنت مراجعًا من منصات التواصل أو مسؤول امتثال، ستجد في الروابط أدناه السياسات المطلوبة وتعليمات حذف البيانات.",
-        resourcesTitle: "روابط عامة",
-        termsLink: "شروط الاستخدام",
-        privacyLink: "سياسة الخصوصية",
-        deletionLink: "حذف البيانات",
-        ownershipBox:
-          "Silvarium Social منتج مملوك ويتم تشغيله بواسطة علامة Silvarium. جميع العلامات والشعارات والأصول البصرية هي ملك لـ Silvarium.",
-        footerLeft: "© YEAR Silvarium. جميع الحقوق محفوظة.",
-        footerPrivacy: "الخصوصية",
-        footerTerms: "الشروط",
-        footerDeletion: "حذف البيانات",
-        dir: "rtl",
-        lang: "ar"
-      }
-    };
+    <button id="langToggle" class="lang-btn" type="button" aria-label="Toggle language">
+      AR
+    </button>
+  </header>
 
-    function setLang(code){
-      const t = STR[code] || STR.en;
+  <main class="container">
+    <section class="card">
+      <div class="hero">
+        <!-- شعار كبير اختياري -->
+        <div class="logo-wrap">
+          <!-- إذا رفعت الشعار: -->
+          <!-- <img src="assets/SILVA1.png" alt="Silvarium Social logo" class="logo" /> -->
+        </div>
 
-      document.documentElement.lang = t.lang;
-      document.documentElement.dir = t.dir;
+        <h1 data-i18n="title">Silvarium Social</h1>
+        <h2 data-i18n="subtitle">Professional Social Media Publishing Platform</h2>
 
-      document.getElementById("tagline").textContent = t.tagline;
-      document.getElementById("heroTitle").textContent = t.heroTitle;
-      document.getElementById("heroText").textContent = t.heroText;
-      document.getElementById("loginBtn").textContent = t.loginBtn;
-      document.getElementById("privacyBtn").textContent = t.privacyBtn;
-      document.getElementById("termsBtn").textContent = t.termsBtn;
-      document.getElementById("noteBox").textContent = t.noteBox;
+        <p class="desc" data-i18n="desc">
+          Silvarium Social is a professional platform designed to help businesses and teams
+          publish, schedule, and manage content across supported social media platforms.
+          Access to the application is restricted to authorized users.
+        </p>
 
-      document.getElementById("resourcesTitle").textContent = t.resourcesTitle;
-      document.getElementById("termsLink").textContent = t.termsLink;
-      document.getElementById("privacyLink").textContent = t.privacyLink;
-      document.getElementById("deletionLink").textContent = t.deletionLink;
-      document.getElementById("ownershipBox").innerHTML = t.ownershipBox;
+        <div class="cta-row">
+          <a class="btn primary" href="https://app.silvariumsocial.com" target="_blank" rel="noopener" data-i18n="cta">
+            Access Application
+          </a>
 
-      document.getElementById("footerLeft").textContent = t.footerLeft.replace("YEAR", new Date().getFullYear());
-      document.getElementById("footerPrivacy").textContent = t.footerPrivacy;
-      document.getElementById("footerTerms").textContent = t.footerTerms;
-      document.getElementById("footerDeletion").textContent = t.footerDeletion;
+          <a class="btn ghost" href="contact.html" data-i18n="contactCta">
+            Contact Support
+          </a>
+        </div>
 
-      document.getElementById("btn-en").classList.toggle("active", code === "en");
-      document.getElementById("btn-ar").classList.toggle("active", code === "ar");
+        <div class="links-row">
+          <a href="https://www.silvariumsocial.com/terms/" data-i18n="terms" target="_blank" rel="noopener">Terms</a>
+          <span class="dot">•</span>
+          <a href="https://www.silvariumsocial.com/privacy/" data-i18n="privacy" target="_blank" rel="noopener">Privacy</a>
+          <span class="dot">•</span>
+          <a href="https://www.silvariumsocial.com/data-deletion/" data-i18n="dataDeletion" target="_blank" rel="noopener">Data Deletion</a>
+        </div>
 
-      localStorage.setItem("silv_lang", code);
-    }
+        <div class="links-row">
+          <a href="status.html" data-i18n="status">System Status</a>
+          <span class="dot">•</span>
+          <a href="contact.html" data-i18n="contact">Contact Support</a>
+        </div>
 
-    document.getElementById("year").textContent = new Date().getFullYear();
-    const saved = localStorage.getItem("silv_lang");
-    setLang(saved || "en");
-  </script>
+        <footer class="footer">
+          <p class="fine" data-i18n="copyright">
+            © Silvarium Social. All rights reserved.<br />
+            Silvarium is a registered brand name.
+          </p>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
