@@ -33,7 +33,7 @@
         "For support inquiries related to Silvarium Social, please contact our support team. " +
         "Support is available for authorized users only.",
       emailLabel: "Email",
-complianceNote: "This domain is used for brand identification and compliance purposes.",
+      complianceNote: "This domain is used for brand identification and compliance purposes.",
 
       copyright:
         "© Silvarium Social. All rights reserved.\nSilvarium is a registered brand name."
@@ -68,7 +68,7 @@ complianceNote: "This domain is used for brand identification and compliance pur
         "للاستفسارات والدعم الفني المتعلقة بمنصة سيلفريوم سوشل، يرجى التواصل مع فريق الدعم.\n" +
         "الدعم متاح للمستخدمين المصرّح لهم فقط.",
       emailLabel: "البريد الإلكتروني",
-complianceNote: "يُستخدم هذا النطاق لأغراض تعريف العلامة التجارية والامتثال.",
+      complianceNote: "يُستخدم هذا النطاق لأغراض تعريف العلامة التجارية والامتثال.",
 
       copyright:
         "© سيلفريوم سوشل. جميع الحقوق محفوظة.\nسيلفريوم  علامة تجارية مسجلة."
