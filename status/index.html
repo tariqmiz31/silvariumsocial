@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Silvarium Social</title>
+  <meta name="description" content="Silvarium Social brand and compliance pages." />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="icon" href="/assets/favicon.ico" />
+  <link rel="icon" type="image/png" href="/assets/favicon.png" />
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <div class="lang-switch">
+        <button id="lang-en" class="pill" type="button" aria-pressed="false">English</button>
+        <button id="lang-ar" class="pill" type="button" aria-pressed="false">العربية</button>
+      </div>
+      <a class="pill" href="https://app.silvariumsocial.com" data-i18n="btn_signin"></a>
+    </div>
+
+    <div class="card">
+      <div class="hero">
+        <div class="logo" aria-hidden="true">
+          <img src="/assets/SILVA1.png" alt="Silvarium logo" />
+        </div>
+        <div>
+          <h1 class="page-title" data-i18n="page_title"></h1>
+          <div class="page-subtitle" data-i18n="page_subtitle"></div>
+        </div>
+      </div>
+
+      <div class="content" id="page-content"></div>
+
+      <div class="links" style="margin-top:18px">
+        <a class="chip" href="/" data-i18n="chip_home"></a>
+        <a class="chip" href="/terms/" data-i18n="chip_terms"></a>
+        <a class="chip" href="/privacy/" data-i18n="chip_privacy"></a>
+        <a class="chip" href="/data-deletion/" data-i18n="chip_delete"></a>
+      </div>
+
+      <div class="footer">
+        <div data-i18n="footer_rights"></div>
+        <div>
+          <a href="https://www.silvariumsocial.com" data-i18n="footer_silvarium"></a>
+          <span> • </span>
+          <a href="https://app.silvariumsocial.com" data-i18n="footer_silvarium_social"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>window.I18N = {"en": {"btn_signin": "Sign in to the Application", "chip_home": "Home", "chip_terms": "Terms", "chip_privacy": "Privacy", "chip_delete": "Data Deletion", "footer_rights": "© Silvarium Social. All rights reserved. Silvarium is a registered brand name.", "footer_silvarium": "Silvarium", "footer_silvarium_social": "Silvarium Social", "page_title": "System Status", "page_subtitle": "Service health and availability"}, "ar": {"btn_signin": "الدخول للتطبيق", "chip_home": "الرئيسية", "chip_terms": "شروط الاستخدام", "chip_privacy": "سياسة الخصوصية", "chip_delete": "حذف البيانات", "footer_rights": "© سيلفاريوم سوشل. جميع الحقوق محفوظة. سيلفاريوم اسم علامة تجارية مسجلة.", "footer_silvarium": "سيلفاريوم", "footer_silvarium_social": "سيلفاريوم سوشل", "page_title": "حالة النظام", "page_subtitle": "صحة الخدمة وتوفرها"}};</script>
+<script>(function(){
+  const supported = ["en","ar"];
+  const storageKey = "silva_lang";
+  function guessLang(){
+    const saved = localStorage.getItem(storageKey);
+    if(saved && supported.includes(saved)) return saved;
+    const nav = (navigator.language || navigator.userLanguage || "en").toLowerCase();
+    return nav.startsWith("ar") ? "ar" : "en";
+  }
+  function setLang(lang){
+    if(!supported.includes(lang)) lang = "en";
+    localStorage.setItem(storageKey, lang);
+    document.documentElement.lang = lang;
+    document.documentElement.dir = (lang === "ar") ? "rtl" : "ltr";
+    document.querySelectorAll("[data-i18n]").forEach(el=>{
+      const key = el.getAttribute("data-i18n");
+      const val = (window.I18N && window.I18N[lang] && window.I18N[lang][key]) || "";
+      if(el.hasAttribute("data-i18n-html")){
+        el.innerHTML = val;
+      } else {
+        el.textContent = val;
+      }
+    });
+    const btnEn = document.getElementById("lang-en");
+    const btnAr = document.getElementById("lang-ar");
+    if(btnEn) btnEn.setAttribute("aria-pressed", String(lang==="en"));
+    if(btnAr) btnAr.setAttribute("aria-pressed", String(lang==="ar"));
+  }
+  window.SilvaSetLang = setLang;
+  window.addEventListener("DOMContentLoaded", ()=>{
+    setLang(guessLang());
+    const btnEn = document.getElementById("lang-en");
+    const btnAr = document.getElementById("lang-ar");
+    if(btnEn) btnEn.addEventListener("click", ()=>setLang("en"));
+    if(btnAr) btnAr.addEventListener("click", ()=>setLang("ar"));
+  });
+})();</script>
+<script>
+(function(){
+  const content = {"en": "<p><strong>Current status:</strong> Operational</p>\n<p>If you experience issues accessing the application or publishing content, please contact support and include a screenshot and the approximate time of the issue.</p>\n<hr/>\n<p><strong>App:</strong> https://app.silvariumsocial.com</p>\n<p><strong>Brand site:</strong> https://www.silvariumsocial.com</p>", "ar": "<p><strong>\u0627\u0644\u062d\u0627\u0644\u0629 \u0627\u0644\u062d\u0627\u0644\u064a\u0629:</strong> \u064a\u0639\u0645\u0644 \u0628\u0634\u0643\u0644 \u0637\u0628\u064a\u0639\u064a</p>\n<p>\u0625\u0630\u0627 \u0648\u0627\u062c\u0647\u062a \u0645\u0634\u0643\u0644\u0629 \u0641\u064a \u0627\u0644\u062f\u062e\u0648\u0644 \u0623\u0648 \u0627\u0644\u0646\u0634\u0631\u060c \u064a\u0631\u062c\u0649 \u0627\u0644\u062a\u0648\u0627\u0635\u0644 \u0645\u0639 \u0627\u0644\u062f\u0639\u0645 \u0645\u0639 \u0625\u0631\u0641\u0627\u0642 \u0644\u0642\u0637\u0629 \u0634\u0627\u0634\u0629 \u0648\u0648\u0642\u062a \u062d\u062f\u0648\u062b \u0627\u0644\u0645\u0634\u0643\u0644\u0629 \u062a\u0642\u0631\u064a\u0628\u064b\u0627.</p>\n<hr/>\n<p><strong>\u0627\u0644\u062a\u0637\u0628\u064a\u0642:</strong> https://app.silvariumsocial.com</p>\n<p><strong>\u0645\u0648\u0642\u0639 \u0627\u0644\u0639\u0644\u0627\u0645\u0629:</strong> https://www.silvariumsocial.com</p>"};
+  function render(){
+    const lang = document.documentElement.lang || "en";
+    const el = document.getElementById("page-content");
+    if(el) el.innerHTML = content[lang] || content.en;
+  }
+  window.addEventListener("DOMContentLoaded", ()=>{ render(); });
+  const orig = window.SilvaSetLang;
+  window.SilvaSetLang = function(lang){ orig(lang); render(); };
+})();
+</script>
+</body>
+</html>
