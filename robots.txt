@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.silvariumsocial.com/sitemap.xml
