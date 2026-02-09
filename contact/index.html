@@ -1,105 +1,69 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Silvarium Social</title>
-  <meta name="description" content="Silvarium Social brand and compliance pages." />
-  <link rel="stylesheet" href="/style.css" />
-  <link rel="icon" href="/assets/favicon.ico" />
-  <link rel="icon" type="image/png" href="/assets/favicon.png" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#2f3f35" />
+  <title data-i18n="meta_title">Contact Support</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="icon" href="./assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="./assets/favicon-32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="./assets/favicon-16.png" sizes="16x16">
+  <link rel="apple-touch-icon" href="./assets/favicon-180.png">
+  
 </head>
-<body>
+<body class="has-bg">
   <div class="container">
     <div class="topbar">
-      <div class="lang-switch">
-        <button id="lang-en" class="pill" type="button" aria-pressed="false">English</button>
-        <button id="lang-ar" class="pill" type="button" aria-pressed="false">العربية</button>
+      <a class="brand-mini" href="./">
+        <img src="./assets/SILVA1.png" alt="Silvarium" />
+        <div class="name" data-i18n="brand_mini">Silvarium</div>
+      </a>
+
+      <div class="lang-toggle" aria-label="Language toggle">
+        <button type="button" data-lang-btn="en">English</button>
+        <button type="button" data-lang-btn="ar">العربية</button>
       </div>
-      <a class="pill" href="https://app.silvariumsocial.com" data-i18n="btn_signin"></a>
     </div>
 
     <div class="card">
-      <div class="hero">
-        <div class="logo" aria-hidden="true">
-          <img src="/assets/SILVA1.png" alt="Silvarium logo" />
-        </div>
-        <div>
-          <h1 class="page-title" data-i18n="page_title"></h1>
-          <div class="page-subtitle" data-i18n="page_subtitle"></div>
-        </div>
-      </div>
+      
+  <div class="hero">
+    <div class="hero-inner">
+      <div>
+        <h1 style="margin:0" data-i18n="title">Contact Support</h1>
+        <p class="note" style="margin-top:8px" data-i18n="subtitle"></p>
 
-      <div class="content" id="page-content"></div>
-
-      <div class="links" style="margin-top:18px">
-        <a class="chip" href="/" data-i18n="chip_home"></a>
-        <a class="chip" href="/terms/" data-i18n="chip_terms"></a>
-        <a class="chip" href="/privacy/" data-i18n="chip_privacy"></a>
-        <a class="chip" href="/data-deletion/" data-i18n="chip_delete"></a>
-      </div>
-
-      <div class="footer">
-        <div data-i18n="footer_rights"></div>
-        <div>
-          <a href="https://silvariumsaa.com" data-i18n="footer_silvarium"></a>
-          <span> • </span>
-          <a href="https://silvariumsocial.com" data-i18n="footer_silvarium_social"></a>
+        <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+          <span class="badge"><strong data-i18n="email_label">Support email:</strong>&nbsp;<a class="underline" href="mailto:support@silvariumsocial.com" data-i18n="email_value">support@silvariumsocial.com</a></span>
+          <span class="badge" data-i18n="hours">Typical response time: within 1–2 business days.</span>
         </div>
       </div>
     </div>
   </div>
 
-<script>window.I18N = {"en": {"btn_signin": "Sign in to the Application", "chip_home": "Home", "chip_terms": "Terms", "chip_privacy": "Privacy", "chip_delete": "Data Deletion", "footer_rights": "© Silvarium Social. All rights reserved. Silvarium is a registered brand name.", "footer_silvarium": "Silvarium", "footer_silvarium_social": "Silvarium Social", "page_title": "Contact Support", "page_subtitle": "Support and compliance contact"}, "ar": {"btn_signin": "الدخول للتطبيق", "chip_home": "الرئيسية", "chip_terms": "شروط الاستخدام", "chip_privacy": "سياسة الخصوصية", "chip_delete": "حذف البيانات", "footer_rights": "© سيلفاريوم سوشل. جميع الحقوق محفوظة. سيلفاريوم اسم علامة تجارية مسجلة.", "footer_silvarium": "سيلفاريوم", "footer_silvarium_social": "سيلفاريوم سوشل", "page_title": "تواصل مع الدعم", "page_subtitle": "الدعم الفني والتواصل للامتثال"}};</script>
-<script>(function(){
-  const supported = ["en","ar"];
-  const storageKey = "silva_lang";
-  function guessLang(){
-    const saved = localStorage.getItem(storageKey);
-    if(saved && supported.includes(saved)) return saved;
-    const nav = (navigator.language || navigator.userLanguage || "en").toLowerCase();
-    return nav.startsWith("ar") ? "ar" : "en";
-  }
-  function setLang(lang){
-    if(!supported.includes(lang)) lang = "en";
-    localStorage.setItem(storageKey, lang);
-    document.documentElement.lang = lang;
-    document.documentElement.dir = (lang === "ar") ? "rtl" : "ltr";
-    document.querySelectorAll("[data-i18n]").forEach(el=>{
-      const key = el.getAttribute("data-i18n");
-      const val = (window.I18N && window.I18N[lang] && window.I18N[lang][key]) || "";
-      if(el.hasAttribute("data-i18n-html")){
-        el.innerHTML = val;
-      } else {
-        el.textContent = val;
-      }
-    });
-    const btnEn = document.getElementById("lang-en");
-    const btnAr = document.getElementById("lang-ar");
-    if(btnEn) btnEn.setAttribute("aria-pressed", String(lang==="en"));
-    if(btnAr) btnAr.setAttribute("aria-pressed", String(lang==="ar"));
-  }
-  window.SilvaSetLang = setLang;
-  window.addEventListener("DOMContentLoaded", ()=>{
-    setLang(guessLang());
-    const btnEn = document.getElementById("lang-en");
-    const btnAr = document.getElementById("lang-ar");
-    if(btnEn) btnEn.addEventListener("click", ()=>setLang("en"));
-    if(btnAr) btnAr.addEventListener("click", ()=>setLang("ar"));
-  });
-})();</script>
-<script>
-(function(){
-  const content = {"en": "<p>For support and compliance inquiries, contact us at:</p>\n<ul>\n  <li><strong>Email:</strong> support@silvariumsa.com</li>\n</ul>\n<p>Please include your account email and a clear description of your request.</p>", "ar": "<p>\u0644\u0644\u062f\u0639\u0645 \u0627\u0644\u0641\u0646\u064a \u0648\u0627\u0633\u062a\u0641\u0633\u0627\u0631\u0627\u062a \u0627\u0644\u0627\u0645\u062a\u062b\u0627\u0644\u060c \u062a\u0648\u0627\u0635\u0644 \u0645\u0639\u0646\u0627 \u0639\u0628\u0631:</p>\n<ul>\n  <li><strong>\u0627\u0644\u0628\u0631\u064a\u062f:</strong> support@silvariumsa.com</li>\n</ul>\n<p>\u064a\u0631\u062c\u0649 \u0630\u0643\u0631 \u0628\u0631\u064a\u062f \u0627\u0644\u062d\u0633\u0627\u0628 \u0648\u0648\u0635\u0641 \u0648\u0627\u0636\u062d \u0644\u0644\u0637\u0644\u0628.</p>"};
-  function render(){
-    const lang = document.documentElement.lang || "en";
-    const el = document.getElementById("page-content");
-    if(el) el.innerHTML = content[lang] || content.en;
-  }
-  window.addEventListener("DOMContentLoaded", ()=>{ render(); });
-  const orig = window.SilvaSetLang;
-  window.SilvaSetLang = function(lang){ orig(lang); render(); };
-})();
-</script>
+  <div class="content">
+    <h3 data-i18n="tips_title">When contacting support, include:</h3>
+    <ul>
+      <li data-i18n="tip1"></li>
+      <li data-i18n="tip2"></li>
+      <li data-i18n="tip3"></li>
+    </ul>
+  </div>
+
+  
+      <div class="footer">
+        <div data-i18n="footer_domain">This domain is used for brand identification and compliance purposes.</div>
+        <div style="margin-top:10px;font-weight:800" data-i18n="footer_rights">© Silvarium Social. All rights reserved.</div>
+        <div data-i18n="footer_trademark">Silvarium is a registered brand name.</div>
+        <div class="links"><a href="./" data-i18n="footer_back">Back to Home</a></div>
+      </div>
+    
+
+    </div>
+  </div>
+
+  <script>window.I18N = {"en": {"brand_mini": "Silvarium", "footer_domain": "This domain is used for brand identification and compliance purposes.", "footer_rights": "© Silvarium Social. All rights reserved.", "footer_trademark": "Silvarium is a registered brand name.", "footer_back": "Back to Home", "footer_silvarium": "Silvarium", "footer_silvarium_social": "Silvarium Social", "meta_title": "Contact Support | Silvarium Social", "headline": "Silvarium Social", "subheadline": "Professional Social Media Publishing Platform", "desc": "Silvarium Social is a professional platform designed to help businesses and teams publish and manage content across supported social media platforms.", "restricted": "Access to the application is restricted to authorized users.", "btn_signin": "Sign in to the Application", "btn_status": "System Status", "btn_contact": "Contact Support", "pill_terms": "Terms", "pill_privacy": "Privacy", "pill_delete": "Data Deletion", "title": "Contact Support", "subtitle": "Need help? Reach our support team using the details below.", "op": "All systems operational.", "last": "Last updated:", "note": "If you are experiencing an issue, please contact support and include a short description and screenshots if available.", "email_label": "Support email:", "email_value": "support@silvariumsocial.com", "hours": "Typical response time: within 1–2 business days.", "tips_title": "When contacting support, include:", "tip1": "Your account email", "tip2": "The platform (e.g., Facebook, Instagram, TikTok)", "tip3": "The time of the issue and a screenshot, if possible"}, "ar": {"brand_mini": "سيلفاريوم", "footer_domain": "يُستخدم هذا النطاق للتعريف بالعلامة التجارية وأغراض الامتثال.", "footer_rights": "© سيلفاريوم سوشل. جميع الحقوق محفوظة.", "footer_trademark": "سيلفاريوم اسم علامة تجارية مسجّل.", "footer_back": "العودة للرئيسية", "footer_silvarium": "سيلفاريوم", "footer_silvarium_social": "سيلفاريوم سوشل", "meta_title": "تواصل مع الدعم | سيلفاريوم سوشل", "headline": "سيلفاريوم سوشل", "subheadline": "منصة احترافية لنشر وإدارة محتوى التواصل الاجتماعي", "desc": "سيلفاريوم سوشل منصة احترافية تساعد الشركات والفرق على نشر وإدارة المحتوى عبر منصات التواصل الاجتماعي المدعومة.", "restricted": "الوصول للتطبيق مخصص للمستخدمين المصرّح لهم فقط.", "btn_signin": "تسجيل الدخول للتطبيق", "btn_status": "حالة النظام", "btn_contact": "تواصل مع الدعم", "pill_terms": "الشروط", "pill_privacy": "الخصوصية", "pill_delete": "حذف البيانات", "title": "تواصل مع الدعم", "subtitle": "للمساعدة والدعم الفني، تواصل معنا عبر المعلومات التالية.", "op": "جميع الأنظمة تعمل بشكل طبيعي.", "last": "آخر تحديث:", "note": "إذا واجهت مشكلة، تواصل مع الدعم وارفق وصف مختصر وصور شاشة إن أمكن.", "email_label": "بريد الدعم:", "email_value": "support@silvariumsocial.com", "hours": "زمن الاستجابة المعتاد: خلال 1–2 يوم عمل.", "tips_title": "عند التواصل، فضلاً ارفق:", "tip1": "البريد المستخدم في الحساب", "tip2": "المنصة (مثل: فيسبوك، إنستغرام، تيك توك)", "tip3": "وقت المشكلة وصورة شاشة إن أمكن"}};</script>
+  <script src="./app.js"></script>
 </body>
 </html>
