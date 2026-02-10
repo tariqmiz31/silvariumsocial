@@ -1,61 +1,73 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#2f3f35" />
-  <title data-i18n="meta_title">System Status</title>
-  <link rel="stylesheet" href="/assets/style.css">
-  <link rel="icon" href="./assets/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" href="./assets/favicon-32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="./assets/favicon-16.png" sizes="16x16">
-  <link rel="apple-touch-icon" href="./assets/favicon-180.png">
-  
+  <title>System Status — Silvarium Social</title>
+
+  <link rel="icon" href="../assets/favicon.ico" />
+  <link rel="icon" type="image/png" href="../assets/favicon.png" />
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+
+  <link rel="stylesheet" href="../assets/style.css" />
+  <script defer src="../assets/app.js"></script>
 </head>
-<body class="has-bg">
+<body>
+  <div class="bg"></div>
+
   <div class="container">
     <div class="topbar">
-      <a class="brand-mini" href="./">
-        <img src="./assets/SILVA1.png" alt="Silvarium" />
-        <div class="name" data-i18n="brand_mini">Silvarium</div>
-      </a>
-
-      <div class="lang-toggle" aria-label="Language toggle">
-        <button type="button" data-lang-btn="en">English</button>
-        <button type="button" data-lang-btn="ar">العربية</button>
-      </div>
-    </div>
-
-    <div class="card">
-      
-  <div class="hero">
-    <div class="hero-inner">
-      <div>
-        <h1 style="margin:0" data-i18n="title">System Status</h1>
-        <p class="note" style="margin-top:8px" data-i18n="subtitle"></p>
-        <div style="margin-top:14px">
-          <span class="badge"><span class="status-dot"></span><span data-i18n="op">All systems operational.</span></span>
+      <div class="brand">
+        <img src="../assets/SILVA1.png" alt="Silvarium Social" />
+        <div class="name">
+          <strong>Silvarium Social</strong>
+          <span>Brand • Policies • Compliance</span>
         </div>
-        <p class="note" style="margin-top:12px"><span data-i18n="last">Last updated:</span> <strong>2026-02-09 01:36 UTC</strong></p>
+      </div>
+
+      <div class="actions">
+        <a class="btn primary" href="https://app.silvariumsocial.com" data-i18n="nav.login">Access App</a>
+        <button class="btn ghost" id="langToggle" onclick="SILVA.toggleLang()">العربية</button>
       </div>
     </div>
-  </div>
-  <div class="content">
-    <p data-i18n="note"></p>
-  </div>
-  
+
+    <section class="hero">
+      <h2 class="page-title" id="pageTitle">System Status</h2>
+
+      <div class="card">
+        <div class="badge ok" id="badge">● All Systems Operational</div>
+        <hr class="sep" />
+        <div class="content" id="pageContent">
+          <p>This page provides a simple status indicator for reviewers and users.</p>
+          <p>If you experience access issues, please contact support.</p>
+        </div>
+      </div>
+
       <div class="footer">
-        <div data-i18n="footer_domain">This domain is used for brand identification and compliance purposes.</div>
-        <div style="margin-top:10px;font-weight:800" data-i18n="footer_rights">© Silvarium Social. All rights reserved.</div>
-        <div data-i18n="footer_trademark">Silvarium is a registered brand name.</div>
-        <div class="links"><a href="./" data-i18n="footer_back">Back to Home</a></div>
+        <div class="muted">
+          <span data-i18n="footer.domain">This domain is used for brand identification and compliance purposes.</span><br/>
+          <span data-i18n="footer.note">© Silvarium Social. All rights reserved. Silvarium is a registered brand name.</span>
+        </div>
+        <div class="links">
+          <a href="../" data-i18n="footer.brand">Silvarium</a>
+          <a href="../" data-i18n="footer.social">Silvarium Social</a>
+        </div>
       </div>
-    
-
-    </div>
+    </section>
   </div>
 
-  <script>window.I18N = {"en": {"brand_mini": "Silvarium", "footer_domain": "This domain is used for brand identification and compliance purposes.", "footer_rights": "© Silvarium Social. All rights reserved.", "footer_trademark": "Silvarium is a registered brand name.", "footer_back": "Back to Home", "footer_silvarium": "Silvarium", "footer_silvarium_social": "Silvarium Social", "meta_title": "System Status | Silvarium Social", "headline": "Silvarium Social", "subheadline": "Professional Social Media Publishing Platform", "desc": "Silvarium Social is a professional platform designed to help businesses and teams publish and manage content across supported social media platforms.", "restricted": "Access to the application is restricted to authorized users.", "btn_signin": "Sign in to the Application", "btn_status": "System Status", "btn_contact": "Contact Support", "pill_terms": "Terms", "pill_privacy": "Privacy", "pill_delete": "Data Deletion", "title": "System Status", "subtitle": "Current status of the Silvarium Social services.", "op": "All systems operational.", "last": "Last updated:", "note": "If you are experiencing an issue, please contact support and include a short description and screenshots if available."}, "ar": {"brand_mini": "سيلفاريوم", "footer_domain": "يُستخدم هذا النطاق للتعريف بالعلامة التجارية وأغراض الامتثال.", "footer_rights": "© سيلفاريوم سوشل. جميع الحقوق محفوظة.", "footer_trademark": "سيلفاريوم اسم علامة تجارية مسجّل.", "footer_back": "العودة للرئيسية", "footer_silvarium": "سيلفاريوم", "footer_silvarium_social": "سيلفاريوم سوشل", "meta_title": "حالة النظام | سيلفاريوم سوشل", "headline": "سيلفاريوم سوشل", "subheadline": "منصة احترافية لنشر وإدارة محتوى التواصل الاجتماعي", "desc": "سيلفاريوم سوشل منصة احترافية تساعد الشركات والفرق على نشر وإدارة المحتوى عبر منصات التواصل الاجتماعي المدعومة.", "restricted": "الوصول للتطبيق مخصص للمستخدمين المصرّح لهم فقط.", "btn_signin": "تسجيل الدخول للتطبيق", "btn_status": "حالة النظام", "btn_contact": "تواصل مع الدعم", "pill_terms": "الشروط", "pill_privacy": "الخصوصية", "pill_delete": "حذف البيانات", "title": "حالة النظام", "subtitle": "الحالة الحالية لخدمات سيلفاريوم سوشل.", "op": "جميع الأنظمة تعمل بشكل طبيعي.", "last": "آخر تحديث:", "note": "إذا واجهت مشكلة، تواصل مع الدعم وارفق وصف مختصر وصور شاشة إن أمكن."}};</script>
-  <script src="./app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const lang = document.documentElement.lang || "en";
+      if (lang === "ar") {
+        document.getElementById("pageTitle").textContent = "حالة النظام";
+        document.getElementById("badge").textContent = "● جميع الأنظمة تعمل";
+        document.getElementById("pageContent").innerHTML = `
+          <p>هذه الصفحة تعرض مؤشر حالة بسيط لمراجعي المنصات والمستخدمين.</p>
+          <p>إذا واجهت مشكلة في الوصول، تواصل مع الدعم.</p>
+        `;
+      }
+    });
+  </script>
 </body>
 </html>
