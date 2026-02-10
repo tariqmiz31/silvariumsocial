@@ -1,80 +1,83 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#2f3f35" />
-  <title data-i18n="meta_title">Silvarium Social</title>
-  <link rel="stylesheet" href="./style.css" />
-  <link rel="icon" href="./assets/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" href="./assets/favicon-32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="./assets/favicon-16.png" sizes="16x16">
-  <link rel="apple-touch-icon" href="./assets/favicon-180.png">
-  
+  <title>Silvarium Social — Brand & Compliance</title>
+
+  <link rel="icon" href="./assets/favicon.ico" />
+  <link rel="icon" type="image/png" href="./assets/favicon.png" />
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png" />
+
+  <link rel="stylesheet" href="./assets/style.css" />
+  <script defer src="./assets/app.js"></script>
 </head>
-<body class="has-bg">
+<body>
+  <div class="bg"></div>
+
   <div class="container">
     <div class="topbar">
-      <a class="brand-mini" href="./">
-        <img src="./assets/SILVA1.png" alt="Silvarium" />
-        <div class="name" data-i18n="brand_mini">Silvarium</div>
-      </a>
-
-      <div class="lang-toggle" aria-label="Language toggle">
-        <button type="button" data-lang-btn="en">English</button>
-        <button type="button" data-lang-btn="ar">العربية</button>
-      </div>
-    </div>
-
-    <div class="card">
-      
-  <div class="hero">
-    <div class="hero-inner">
-      <div>
-        <div class="logo-block">
-          <img src="./assets/SILVA1.png" alt="Silvarium Social" />
-          <div class="hgroup">
-            <h1 data-i18n="headline">Silvarium Social</h1>
-            <h2 data-i18n="subheadline">Professional Social Media Publishing Platform</h2>
-          </div>
-        </div>
-
-        <p class="lead" data-i18n="desc"></p>
-        <p class="note" data-i18n="restricted"></p>
-
-        <div class="actions">
-          <a class="btn primary" href="https://app.silvariumsocial.com" data-i18n="btn_signin">Sign in to the Application</a>
-          <a class="btn" href="./status/index.html" data-i18n="btn_status">System Status</a>
-          <a class="btn" href="./contact/index.html" data-i18n="btn_contact">Contact Support</a>
+      <div class="brand">
+        <img src="./assets/SILVA1.png" alt="Silvarium Social" />
+        <div class="name">
+          <strong>Silvarium Social</strong>
+          <span>Brand • Policies • Compliance</span>
         </div>
       </div>
 
-      <div style="display:flex;justify-content:flex-end;align-items:flex-start;gap:12px;flex-wrap:wrap">
-        <span class="badge"><span class="status-dot" aria-hidden="true"></span><span>Operational</span></span>
-        <span class="badge">silvariumsocial.com</span>
+      <div class="actions">
+        <a class="btn primary" href="https://app.silvariumsocial.com" data-i18n="nav.login">Access App</a>
+        <button class="btn ghost" id="langToggle" onclick="SILVA.toggleLang()">العربية</button>
       </div>
     </div>
-  </div>
 
-  <div class="pills">
-    <a class="pill" href="./terms/index.html" data-i18n="pill_terms">Terms</a>
-    <a class="pill" href="./privacy/index.html" data-i18n="pill_privacy">Privacy</a>
-    <a class="pill" href="./terms/index.html" data-i18n="pill_delete">Data Deletion</a>
-  </div>
+    <section class="hero">
+      <div class="kicker" data-i18n="hero.kicker">Brand & Compliance</div>
+      <h1 class="h1" data-i18n="hero.title">Silvarium Social</h1>
+      <p class="sub" data-i18n="hero.subtitle">
+        Professional Social Media Publishing Platform for businesses and teams across supported social platforms.
+      </p>
 
-  
+      <hr class="sep" />
+
+      <div class="grid">
+        <div class="card">
+          <h3 data-i18n="cards.info.title">Reviewer Note</h3>
+          <p data-i18n="cards.info.p">
+            This domain is used for brand identification and compliance. Policy pages are available here, while the application is protected and restricted to authorized users only.
+          </p>
+          <hr class="sep" />
+          <p class="content" data-i18n="hero.reviewers">
+            Silvarium Social is a professional platform designed to help businesses and teams publish and manage content across supported social media platforms.
+            Access to the application is restricted to authorized users.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 data-i18n="cards.links.title">Policy Links</h3>
+          <ul class="list">
+            <li><a href="./terms/"><span data-i18n="cards.links.terms">Terms of Service</span><small>→</small></a></li>
+            <li><a href="./privacy/"><span data-i18n="cards.links.privacy">Privacy Policy</span><small>→</small></a></li>
+            <li><a href="./data-deletion/"><span data-i18n="cards.links.deletion">Data Deletion</span><small>→</small></a></li>
+            <li><a href="./contact/"><span data-i18n="cards.links.contact">Contact & Support</span><small>→</small></a></li>
+            <li><a href="./status/"><span data-i18n="cards.links.status">System Status</span><small>→</small></a></li>
+          </ul>
+        </div>
+      </div>
+
       <div class="footer">
-        <div data-i18n="footer_domain">This domain is used for brand identification and compliance purposes.</div>
-        <div style="margin-top:10px;font-weight:800" data-i18n="footer_rights">© Silvarium Social. All rights reserved.</div>
-        <div data-i18n="footer_trademark">Silvarium is a registered brand name.</div>
-        
+        <div class="muted">
+          <span data-i18n="footer.domain">This domain is used for brand identification and compliance purposes.</span><br/>
+          <span data-i18n="footer.note">© Silvarium Social. All rights reserved. Silvarium is a registered brand name.</span>
+        </div>
+
+        <div class="links">
+          <a href="https://www.silvariumsocial.com" data-i18n="footer.brand">Silvarium</a>
+          <a href="https://www.silvariumsocial.com" data-i18n="footer.social">Silvarium Social</a>
+        </div>
       </div>
-    
-
-    </div>
+    </section>
   </div>
-
-  <script>window.I18N = {"en": {"brand_mini": "Silvarium", "footer_domain": "This domain is used for brand identification and compliance purposes.", "footer_rights": "© Silvarium Social. All rights reserved.", "footer_trademark": "Silvarium is a registered brand name.", "footer_back": "Back to Home", "footer_silvarium": "Silvarium", "footer_silvarium_social": "Silvarium Social", "meta_title": "Silvarium Social", "headline": "Silvarium Social", "subheadline": "Professional Social Media Publishing Platform", "desc": "Silvarium Social is a professional platform designed to help businesses and teams publish and manage content across supported social media platforms.", "restricted": "Access to the application is restricted to authorized users.", "btn_signin": "Sign in to the Application", "btn_status": "System Status", "btn_contact": "Contact Support", "pill_terms": "Terms", "pill_privacy": "Privacy", "pill_delete": "Data Deletion"}, "ar": {"brand_mini": "سيلفاريوم", "footer_domain": "يُستخدم هذا النطاق للتعريف بالعلامة التجارية وأغراض الامتثال.", "footer_rights": " سيلفاريوم سوشال. جميع الحقوق محفوظة.", "footer_trademark": "سيلفاريوم اسم علامة تجارية مسجّل.", "footer_back": "العودة للرئيسية", "footer_silvarium": "سيلفاريوم", "footer_silvarium_social": "سيلفاريوم سوشال", "meta_title": "سيلفاريوم سوشال", "headline": "سيلفاريوم سوشال", "subheadline": "منصة احترافية لنشر وإدارة محتوى التواصل الاجتماعي", "desc": "سيلفاريوم سوشال منصة احترافية تساعد الفريق على نشر وإدارة المحتوى عبر منصات التواصل الاجتماعي المدعومة.", "restricted": "الوصول للتطبيق مخصص للمستخدمين المصرّح لهم فقط.", "btn_signin": "تسجيل الدخول للتطبيق", "btn_status": "حالة النظام", "btn_contact": "تواصل مع الدعم", "pill_terms": "الشروط", "pill_privacy": "الخصوصية", "pill_delete": "حذف البيانات"}};</script>
-  <script src="./app.js"></script>
 </body>
 </html>
+
