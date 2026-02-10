@@ -1,42 +1,75 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="utf-8">
-  <title>Contact | Silvarium Social</title>
-  <link rel="stylesheet" href="/assets/style.css">
-  <link rel="icon" href="/assets/favicon.ico">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact & Support — Silvarium Social</title>
+
+  <link rel="icon" href="../assets/favicon.ico" />
+  <link rel="icon" type="image/png" href="../assets/favicon.png" />
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+
+  <link rel="stylesheet" href="../assets/style.css" />
+  <script defer src="../assets/app.js"></script>
 </head>
 <body>
+  <div class="bg"></div>
 
-<header class="site-header">
-  <a href="/">Silvarium Social</a>
-</header>
+  <div class="container">
+    <div class="topbar">
+      <div class="brand">
+        <img src="../assets/SILVA1.png" alt="Silvarium Social" />
+        <div class="name">
+          <strong>Silvarium Social</strong>
+          <span>Brand • Policies • Compliance</span>
+        </div>
+      </div>
 
-<main class="content">
-  <h1>Contact & Support</h1>
+      <div class="actions">
+        <a class="btn primary" href="https://app.silvariumsocial.com" data-i18n="nav.login">Access App</a>
+        <button class="btn ghost" id="langToggle" onclick="SILVA.toggleLang()">العربية</button>
+      </div>
+    </div>
 
-  <p>
-    For support, inquiries, or compliance requests, please contact us:
-  </p>
+    <section class="hero">
+      <h2 class="page-title" id="pageTitle">Contact & Support</h2>
 
-  <p>
-    📧 <strong>support@silvariumsocial.com</strong>
-  </p>
+      <div class="card">
+        <div class="content" id="pageContent">
+          <p><strong>Support Email:</strong> <a href="mailto:support@silvariumsocial.com" style="color:#fff">support@silvariumsocial.com</a></p>
+          <p>For platform reviewers, policy pages and compliance information are available on this domain.</p>
+          <p>Application access is restricted to authorized users only.</p>
+        </div>
+      </div>
 
-  <hr>
+      <div class="footer">
+        <div class="muted">
+          <span data-i18n="footer.domain">This domain is used for brand identification and compliance purposes.</span><br/>
+          <span data-i18n="footer.note">© Silvarium Social. All rights reserved. Silvarium is a registered brand name.</span>
+        </div>
+        <div class="links">
+          <a href="../" data-i18n="footer.brand">Silvarium</a>
+          <a href="../" data-i18n="footer.social">Silvarium Social</a>
+        </div>
+      </div>
+    </section>
+  </div>
 
-  <h2>التواصل والدعم</h2>
-  <p>
-    لأي استفسارات أو طلبات دعم أو متطلبات تنظيمية، يرجى التواصل عبر البريد الإلكتروني.
-  </p>
-</main>
-
-<footer class="site-footer">
-  <a href="/terms">Terms</a> ·
-  <a href="/privacy">Privacy</a> ·
-  <a href="/data-deletion">Data Deletion</a>
-  <p>© Silvarium Social. All rights reserved.</p>
-</footer>
-
+  <script>
+    // bilingual content for this page
+    document.addEventListener("DOMContentLoaded", () => {
+      const lang = document.documentElement.lang || "en";
+      if (lang === "ar") {
+        document.getElementById("pageTitle").textContent = "الدعم والتواصل";
+        document.getElementById("pageContent").innerHTML = `
+          <p><strong>بريد الدعم:</strong> <a href="mailto:support@silvariumsocial.com" style="color:#fff">support@silvariumsocial.com</a></p>
+          <p>لمراجعي المنصات: روابط السياسات ومعلومات الامتثال متاحة على هذا النطاق.</p>
+          <p>الوصول للتطبيق محصور على المستخدمين المصرّح لهم فقط.</p>
+        `;
+      } else {
+        document.getElementById("pageTitle").textContent = "Contact & Support";
+      }
+    });
+  </script>
 </body>
 </html>
