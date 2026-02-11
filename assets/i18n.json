@@ -3,7 +3,7 @@
     "brand_sub": "Brand & Compliance Portal",
     "home_title": "Silvarium Social",
     "home_tagline": "Professional Social Media Publishing Platform",
-    "home_desc": "Silvarium Social is a professional internal platform designed to help businesses and teams publish and manage content across supported social media platforms. Access is restricted to authorized users only.",
+    "home_desc": "Silvarium Social is an internal platform developed exclusively for Silvarium Establishment to manage and publish content across supported social media platforms. Access is restricted to authorized users only."
     "home_cta_app": "Open Application",
     "home_cta_docs": "Policies & Compliance",
     "home_panel1_title": "For platform reviewers",
@@ -11,7 +11,7 @@
     "home_panel2_title": "Restricted access",
     "home_panel2_p": "The publishing application is available only to authorized users. Authentication is required to access internal features and connected social accounts.",
     "home_panel3_title": "Company ownership",
-    "home_panel3_p": "Silvarium Social is owned and operated by Silvarium. Silvarium is a registered brand name. All rights reserved.",
+    "home_panel3_p": "Silvarium Social is owned and operated by Silvarium Establishment (a registered sole proprietorship). Silvarium is a registered trade name. All rights reserved.",
     "home_panel4_title": "Compliance links",
     "home_panel4_list1": "Terms of Service",
     "home_panel4_list2": "Privacy Policy",
@@ -83,9 +83,9 @@
   },
   "ar": {
     "brand_sub": "بوابة العلامة التجارية والامتثال",
-    "home_title": "Silvarium Social",
+    "home_title": "سيلفاريوم سوشال",
     "home_tagline": "منصة احترافية لإدارة ونشر المحتوى عبر منصات التواصل",
-    "home_desc": "Silvarium Social منصة داخلية احترافية تساعد الفرق والشركات على نشر وإدارة المحتوى عبر منصات التواصل المدعومة. الوصول إلى التطبيق محصور بالمستخدمين المصرّح لهم فقط.",
+"home_desc": "سيلفاريوم سوشال منصة داخلية مطوّرة خصيصًا لمؤسسة سيلفاريوم لإدارة ونشر المحتوى عبر منصات التواصل المدعومة، ويقتصر استخدامها على المستخدمين المصرّح لهم فقط."
     "home_cta_app": "الدخول إلى التطبيق",
     "home_cta_docs": "السياسات والامتثال",
     "home_panel1_title": "لِمراجعي منصات التواصل",
@@ -93,7 +93,7 @@
     "home_panel2_title": "وصول مقيّد",
     "home_panel2_p": "تطبيق النشر متاح للمستخدمين المخولين فقط. يلزم تسجيل الدخول للوصول للخصائص الداخلية والحسابات المرتبطة.",
     "home_panel3_title": "ملكية وتشغيل",
-    "home_panel3_p": "Silvarium Social مملوك ومدار بواسطة سيلفاريوم. سيلفاريوم اسم علامة تجارية مسجّل. جميع الحقوق محفوظة.",
+    "home_panel3_p": "سيلفاريوم سوشال مملوك ومدار بواسطة مؤسسة سيلفاريوم. سيلفاريوم اسم تجاري مسجّل. جميع الحقوق محفوظة."
     "home_panel4_title": "روابط الامتثال",
     "home_panel4_list1": "الشروط والأحكام",
     "home_panel4_list2": "سياسة الخصوصية",
