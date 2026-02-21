@@ -54,7 +54,9 @@
     "privacy_security_p": "We apply reasonable technical and organizational measures to protect stored data. No system can be guaranteed 100% secure.",
     "privacy_rights_h": "6. Your choices",
     "privacy_rights_p": "Authorized users may request access, correction, or deletion of their account data. See the Data Deletion page for instructions.",
-    "privacy_contact_h": "7. Contact",
+    "privacy_APIs_h": "7. APIs",
+    "privacy_APIs_p": "We use official APIs provided by Meta, Google (YouTube), Snapchat, and other platforms.We do not use automation, scraping, or unofficial tools."
+    "privacy_contact_h": "8. Contact",
     "privacy_contact_p": "For privacy-related inquiries, contact us at support@silvariumsocial.com or call +966575569677.",
     "deletion_title": "Data Deletion",
     "deletion_intro": "Silvarium Social provides a clear process for data deletion requests for authorized users.",
@@ -139,7 +141,9 @@
     "privacy_security_p": "نطبق إجراءات تقنية وتنظيمية معقولة لحماية البيانات. لا يوجد نظام مضمون 100%.",
     "privacy_rights_h": "6. خيارات المستخدم",
     "privacy_rights_p": "يمكن للمستخدمين المخوّلين طلب الوصول أو التصحيح أو حذف بيانات حسابهم. راجع صفحة حذف البيانات للطريقة.",
-    "privacy_contact_h": "7. التواصل",
+    "privacy_APIs_h": "7. واجهات برمجة التطبيقات",
+    "privacy_APIs_p": "نستخدم فقط واجهات البرمجة الرسمية (APIs) المقدّمة من منصات مثل Meta، وGoogle (YouTube)، وSnapchat، وغيرها من المنصات المعتمدة.ولا نستخدم أي أدوات آلية غير رسمية، أو تقنيات جمع بيانات (Scraping)، أو وسائل مخالفة لسياسات هذه المنصات."
+    "privacy_contact_h": "8. التواصل",
     "privacy_contact_p": "للاستفسارات المتعلقة بالخصوصية تواصل معنا عبر: support@silvariumsocial.com أو عبر الهاتف: 0575569677.",
     "deletion_title": "حذف البيانات",
     "deletion_intro": "يوفر سيلفاريوم سوشال آلية واضحة لطلبات حذف البيانات للمستخدمين المخولين.",
